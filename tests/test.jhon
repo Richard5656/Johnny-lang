@@ -1,0 +1,45 @@
+program start
+    : line_br start
+        "\n\n" . ;
+    end
+   
+   
+    : parameter_test start
+        if 90 = start
+           line_br ;
+          "what you sent is equal to 90" . ;
+        end
+    end
+   
+   
+   
+    : function start // example function
+        "I was executed inside a function" .; // print's 9
+        line_br;
+        return 95;
+    end
+   
+   
+    "hello world" . ; // hello world script '.' is the print command
+   
+    var num = 0 ; // sets the varible s to zero
+    var str = "hi there" ; // sets the varible s to "hi there"
+   
+    var i = 0;
+    while i 12 < start // while loop
+        i . ;
+        i = i 1 +; // all expressions are in reverse polish notation to make it easier to parse
+    end
+   
+    for var i =0; i = i 1 +; i 10 < start // for loop
+        "\n" .; // prints a line break
+         i .;
+    end
+   
+    //function call
+    line_br;
+    5 function + .; // function returns 95 and added by 5 is 100
+    line_br;
+    4 . ;
+    90 parameter_test ;
+end
